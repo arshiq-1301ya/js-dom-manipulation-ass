@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4 - Add a New Paragraph</title>
+</head>
+<body>
+  <div id="container">
+    <p>This is the original paragraph.</p>
+  </div>
+
+  <script>
+    // 1. Create a new <p> element
+    const newPara = document.createElement("p");
+
+    // 2. Set its text content
+    newPara.textContent = "This paragraph was added using JavaScript!";
+
+    // 3. Append it to the end of the container
+    document.getElementById("container").appendChild(newPara);
+  </script>
+</body>
+</html>

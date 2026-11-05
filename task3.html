@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 3 - Style Multiple Elements</title>
+</head>
+<body>
+  <p class="note">Note 1</p>
+  <p class="note">Note 2</p>
+
+  <script>
+    // 1. Select all elements with class "note"
+    const notes = document.querySelectorAll(".note");
+
+    // 2. Loop and set font style to italic
+    notes.forEach(function (note) {
+      note.style.fontStyle = "italic";
+    });
+  </script>
+</body>
+</html>

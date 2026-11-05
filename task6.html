@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 6 - innerHTML, innerText & textContent</title>
+</head>
+<body>
+  <h1 id="title">Welcome to DOM</h1>
+  <p class="text">Learning DOM is fun!</p>
+  <button>Click me</button>
+  <button>Don't click me</button>
+
+  <div>
+    <span>Visible text <span style="display:none;">hidden text</span></span>
+  </div>
+
+  <script>
+    // 1. getElementById
+    const title = document.getElementById("title");
+    console.log("Title innerText:", title.innerText);
+    title.innerHTML = "Welcome <b>Student</b>";
+
+    // 2. getElementsByClassName
+    const textEl = document.getElementsByClassName("text")[0];
+    textEl.textContent = "DOM is powerful";
+    textEl.style.color = "blue";
+
+    // 3. querySelectorAll
+    const buttons = document.querySelectorAll("button");
+    buttons[1].innerText = "Clicked!";
+
+    // 4. querySelector - compare innerText vs textContent
+    const span = document.querySelector("div span");
+    console.log("span innerText:", span.innerText);       // only visible text
+    console.log("span textContent:", span.textContent);   // includes hidden text
+  </script>
+</body>
+</html>

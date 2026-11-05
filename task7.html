@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 7 - Generate a 5x5 Table</title>
+  <style>
+    table { border-collapse: collapse; }
+    td { border: 1px solid #333; padding: 10px 16px; text-align: center; }
+  </style>
+</head>
+<body>
+  <script>
+    // 1. Create the table
+    const table = document.createElement("table");
+    let count = 1;
+
+    // 2. Nested loops: 5 rows x 5 columns
+    for (let i = 0; i < 5; i++) {
+      const row = document.createElement("tr");
+      for (let j = 0; j < 5; j++) {
+        const cell = document.createElement("td");
+        cell.textContent = count++;   // 1 to 25
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+
+    // 3. Append the table to the body
+    document.body.appendChild(table);
+  </script>
+</body>
+</html>
